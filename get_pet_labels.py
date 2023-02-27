@@ -40,10 +40,49 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
-    results_dic = {}
+    results_dic = dict()
     
+    filename_list = listdir(image_dir)
     
+    for filename in filename_list:
+      pet_label = get_pet_label(filename)
+      if filename not in results_dic:
+        results_dic[filename] = [pet_label]
+      else:
+        print("** Warning: Key=", filename, "already exists in results_dic with value =", results_dic[filename])
     
     # Replace None with the results_dic dictionary that you created with this
     # function
-    return None
+    return results_dic
+
+def get_pet_label(pet_image):
+  """
+  Get pet label from pet image file
+  (ex. filename = 'Boston_terrier_02259.jpg' Pet label = 'boston terrier')
+  Parameters:
+      pet_image (string): the filename of the pet image
+      
+  Returns:
+    The pet label
+  """
+  # Sets string to lower case letters
+  low_pet_image = pet_image.lower()
+
+  # Splits lower case string by _ to break into words 
+  word_list_pet_image = low_pet_image.split("_")
+
+  # Create pet_name starting as empty string
+  pet_name = ""
+
+  # Loops to check if word in pet name is only
+  # alphabetic characters - if true append word
+  # to pet_name separated by trailing space 
+  for word in word_list_pet_image:
+      if word.isalpha():
+          pet_name += word + " "
+
+  # Strip off starting/trailing whitespace characters 
+  pet_name = pet_name.strip()
+
+  return pet_name
+  
