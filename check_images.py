@@ -3,8 +3,8 @@
 # */AIPND-revision/intropyproject-classify-pet-images/check_images.py
 #
 # TODO 0: Add your information below for Programmer & Date Created.                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                  
+# PROGRAMMER: Edwin Chia
+# DATE CREATED: 27-02-2023                         
 # REVISED DATE: 
 # PURPOSE: Classifies pet images using a pretrained CNN model, compares these
 #          classifications to the true identity of the pets in the images, and
@@ -24,18 +24,18 @@
 ##
 
 # Imports python modules
-from time import time, sleep
+from time import sleep, time
 
-# Imports print functions that check the lab
-from print_functions_for_lab_checks import *
-
+from adjust_results4_isadog import adjust_results4_isadog
+from calculates_results_stats import calculates_results_stats
+from classify_images import classify_images
 # Imports functions created for this program
 from get_input_args import get_input_args
 from get_pet_labels import get_pet_labels
-from classify_images import classify_images
-from adjust_results4_isadog import adjust_results4_isadog
-from calculates_results_stats import calculates_results_stats
+# Imports print functions that check the lab
+from print_functions_for_lab_checks import *
 from print_results import print_results
+
 
 # Main program function defined below
 def main():
