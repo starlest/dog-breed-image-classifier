@@ -69,6 +69,6 @@ def classify_images(images_dir, results_dic, model):
     for key in results_dic:
       result = results_dic[key]
       image_path = images_dir + key
-      classifier_labels = classifier(image_path, model)
+      classifier_label = classifier(image_path, model).lower().strip()
       pet_image_label = result[0]
-      result.extend([classifier_labels, 1 if pet_image_label in classifier_labels else 0])
+      result.extend([classifier_label, 1 if pet_image_label in classifier_label else 0])
