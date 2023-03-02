@@ -310,7 +310,7 @@ PetLabelDog: 1  ClassLabelDog: 1
 
  ** Statistics from calculates_results_stats() function:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
-Pct Corr dog: 100.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:  70.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
 
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
@@ -322,12 +322,10 @@ N Images            :  40
 N Dog Images        :  30
 N Not Dog Images    :  10
  
-pct_correct_breed   : 70.00
 pct_match           : 87.50
 pct_correct_dogs    : 100.00
-pct_correct_notdogs : 0.00
-
-INCORRECT Dog/NOT Dog Assignments:
+pct_correct_breed   : 93.33
+pct_correct_notdogs : 100.00
 
 INCORRECT Dog Breed Assignment:
 Real:                     beagle   Classifier:  walker hound, walker foxhound
